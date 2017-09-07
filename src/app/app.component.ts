@@ -3,6 +3,7 @@ import { headerComponent } from './header/app.headerComponent';
 import { navComponent } from './nav/app.navComponent';
 import { contentAreaComponent } from './contentArea/app.contentAreaComponent';
 import { footerComponent } from './footer/app.footerComponent';
+import { aboutComponent } from './about/app.aboutComponent';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { footerComponent } from './footer/app.footerComponent';
 
 // class comportant tout les élements qui seront injectés dans le HTML
 export class AppComponent {
-  
+
 
 
 

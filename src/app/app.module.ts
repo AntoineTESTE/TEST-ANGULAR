@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { headerComponent } from './header/app.headerComponent';
 import { navComponent } from './nav/app.navComponent';
 import { contentAreaComponent } from './contentArea/app.contentAreaComponent';
 import { footerComponent } from './footer/app.footerComponent';
+import { aboutComponent } from './about/app.aboutComponent';
 
 
 @NgModule({
@@ -14,10 +16,21 @@ import { footerComponent } from './footer/app.footerComponent';
     headerComponent,
     navComponent,
     contentAreaComponent,
-    footerComponent
+    footerComponent,
+    aboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {
+        path: 'about',
+        component: aboutComponent
+      },
+      {
+        path: '',
+        component: contentAreaComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
